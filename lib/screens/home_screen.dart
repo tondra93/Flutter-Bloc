@@ -64,6 +64,15 @@ class HomeScreen extends StatelessWidget {
                       fontSize: 20,
                       fontWeight: FontWeight.w300,
                     ),),
+                    SizedBox(height: 8,),
+                    Text(
+                      'Good Morning',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),  
+                    )
                   ],
                 ),
               )
