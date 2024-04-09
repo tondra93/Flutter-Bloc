@@ -35,6 +35,17 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.deepPurple,
                   ),
                 ),
+              ),
+              Align(
+                alignment: const AlignmentDirectional(-3,-0.3),
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xFF673AB7),
+                  ),
+                ),
               )
             ], ),
          ),
