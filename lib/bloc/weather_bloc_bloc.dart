@@ -11,13 +11,13 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
   WeatherBlocBloc() : super(WeatherBlocInitial()) {
     on<FetchWeather>((event, emit) async {
       emit(WeatherBlocLoading());
-      // TODO: implement event handler
       try {
         WeatherFactory wf = WeatherFactory(API_KEY, language: Language.ENGLISH);
-        Position position = await Geolocator.getCurrentPosition();
+        //Position position = await Geolocator.getCurrentPosition();
         Weather weather = await wf.currentWeatherByLocation(
-            position.latitude, position.longitude);
-        print(weather);
+            event.position.latitude, 
+            event.position.longitude);
+        //print(weather);
         emit(WeatherBlocSuccess(weather));
       } catch (e) {
         emit(WeatherBlocFailure());
